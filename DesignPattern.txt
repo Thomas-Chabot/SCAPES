@@ -1,0 +1,12 @@
+The Design Pattern I used was the Factory Method.
+
+PURPOSE:
+According to the Gang of Four, the Factory Method is best used when a class knows when to create an abstract class, but not the particular instance of that class. Using a factory allows the "what" to be contained within the factory, so that the client class can only take care of the "when".
+
+THE PROBLEM:
+This solved a problem in my code with creating Statement objects - the Program class knows when it needs to create a Statement, but there are many different kinds of Statements available and the correct choice varies based on the program being run. By using a StatementFactory, I was able to abstract away all the implementation details from the Program (which knows only when to create a new Statement) into my Factory (which will create the concrete class).
+
+CLASS IMPLEMENTATION:
+The specific class is under Logic > Statement > StatementFactory. I have the interface class under Interfaces and the class implementation under src.
+
+The Factory is used inside the Program object (Logic > Core > Program) inside the CreateStatements() method.

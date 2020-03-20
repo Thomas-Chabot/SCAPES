@@ -1,0 +1,1005 @@
+{
+    "arrays": [
+        {
+            "name": "Array",
+            "size": {
+                "name": "n",
+                "type": "IntOperand"
+            }
+        }
+    ],
+    "ints": [
+        {
+            "name": "InitializationLoopCounter"
+        },
+        {
+            "name": "PrintLoopCounter"
+        },
+        {
+            "name": "n"
+        },
+        {
+            "name": "LoopCounter2"
+        },
+        {
+            "name": "LoopCounter1"
+        },
+        {
+            "name": "LastElementIndex"
+        },
+        {
+            "name": "DidSwap"
+        },
+        {
+            "name": "Temp"
+        },
+        {
+            "name": "NextElement"
+        }
+    ],
+    "statements": [
+        {
+            "lineNumber": 6,
+            "operand1": {
+                "name": "LoopCounter1",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 7,
+            "operand1": {
+                "name": "LoopCounter2",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 8,
+            "operand1": {
+                "name": "DidSwap",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 9,
+            "operand1": {
+                "name": "Temp",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 10,
+            "operand1": {
+                "name": "NextElement",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 11,
+            "operand1": {
+                "name": "LastElementIndex",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 12,
+            "operand1": {
+                "name": "n",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 13,
+            "operand1": {
+                "name": "PrintLoopCounter",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 14,
+            "operand1": {
+                "name": "InitializationLoopCounter",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 17,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Please enter how many elements to be stored in the array:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 18,
+            "operand1": {
+                "name": "n",
+                "type": "IntOperand"
+            },
+            "type": "ReadIntStatement"
+        },
+        {
+            "lineNumber": 21,
+            "operand1": {
+                "name": "Array",
+                "type": "NameOperand"
+            },
+            "operand2": {
+                "name": "n",
+                "type": "IntOperand"
+            },
+            "type": "DeclareArrayStatement"
+        },
+        {
+            "lineNumber": 25,
+            "operand1": {
+                "name": "InitializeArray",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "AfterInitialization"
+            },
+            "lineNumber": 26,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Exiting initialization step"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 27,
+            "operand1": {
+                "name": "BubbleSort",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "AfterBubbleSort"
+            },
+            "lineNumber": 29,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Exiting BubbleSort step"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 30,
+            "operand1": {
+                "name": "PrintArray",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "AfterPrint"
+            },
+            "lineNumber": 32,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Exiting Print step"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 33,
+            "operand1": {
+                "name": "PrintVariables",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "EndOfProgram"
+            },
+            "lineNumber": 35,
+            "type": "EndStatement"
+        },
+        {
+            "label": {
+                "name": "BubbleSort"
+            },
+            "lineNumber": 41,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Entering Bubble Sort"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 44,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "operand2": {
+                "name": "LoopCounter1",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 45,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "operand2": {
+                "name": "LoopCounter2",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 50,
+            "operand1": {
+                "name": "n",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "LastElementIndex",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 51,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": -1
+            },
+            "operand2": {
+                "name": "LastElementIndex",
+                "type": "IntOperand"
+            },
+            "type": "AddStatement"
+        },
+        {
+            "label": {
+                "name": "BSLoop1"
+            },
+            "lineNumber": 54,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Starting BSLoop1"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 55,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "operand2": {
+                "name": "NextElement",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 56,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "operand2": {
+                "name": "LoopCounter2",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 59,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "operand2": {
+                "name": "DidSwap",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "label": {
+                "name": "StartBSLoop2"
+            },
+            "lineNumber": 63,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Checking loop counters"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 64,
+            "operand1": {
+                "name": "LoopCounter2",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "LastElementIndex",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 65,
+            "operand1": {
+                "name": "AfterBSLoop2",
+                "type": "LabelOperand"
+            },
+            "type": "JumpEqualStatement"
+        },
+        {
+            "lineNumber": 66,
+            "operand1": {
+                "name": "BSLoop2",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "BSLoop2"
+            },
+            "lineNumber": 70,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Starting BSLoop2"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 71,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 1
+            },
+            "operand2": {
+                "name": "NextElement",
+                "type": "IntOperand"
+            },
+            "type": "AddStatement"
+        },
+        {
+            "lineNumber": 75,
+            "operand1": {
+                "index": {
+                    "name": "LoopCounter2",
+                    "type": "IntOperand"
+                },
+                "name": "Array",
+                "type": "ArrayOperand"
+            },
+            "operand2": {
+                "index": {
+                    "name": "NextElement",
+                    "type": "IntOperand"
+                },
+                "name": "Array",
+                "type": "ArrayOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 76,
+            "operand1": {
+                "name": "Swap",
+                "type": "LabelOperand"
+            },
+            "type": "JumpMoreStatement"
+        },
+        {
+            "label": {
+                "name": "AfterSwap"
+            },
+            "lineNumber": 79,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 1
+            },
+            "operand2": {
+                "name": "LoopCounter2",
+                "type": "IntOperand"
+            },
+            "type": "AddStatement"
+        },
+        {
+            "lineNumber": 80,
+            "operand1": {
+                "name": "StartBSLoop2",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "AfterBSLoop2"
+            },
+            "lineNumber": 84,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Exiting BSLoop2"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 85,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 1
+            },
+            "operand2": {
+                "name": "LoopCounter1",
+                "type": "IntOperand"
+            },
+            "type": "AddStatement"
+        },
+        {
+            "lineNumber": 86,
+            "operand1": {
+                "name": "LoopCounter1",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "n",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 87,
+            "operand1": {
+                "name": "CheckProceedLoop1",
+                "type": "LabelOperand"
+            },
+            "type": "JumpLessStatement"
+        },
+        {
+            "lineNumber": 91,
+            "operand1": {
+                "name": "AfterBubbleSort",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "CheckProceedLoop1"
+            },
+            "lineNumber": 95,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Checking if a swap was made"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 96,
+            "operand1": {
+                "name": "DidSwap",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 97,
+            "operand1": {
+                "name": "AfterBubbleSort",
+                "type": "LabelOperand"
+            },
+            "type": "JumpEqualStatement"
+        },
+        {
+            "lineNumber": 98,
+            "operand1": {
+                "name": "BSLoop1",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "Swap"
+            },
+            "lineNumber": 105,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Entering Swap step"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 106,
+            "operand1": {
+                "index": {
+                    "name": "LoopCounter2",
+                    "type": "IntOperand"
+                },
+                "name": "Array",
+                "type": "ArrayOperand"
+            },
+            "operand2": {
+                "name": "Temp",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 107,
+            "operand1": {
+                "index": {
+                    "name": "NextElement",
+                    "type": "IntOperand"
+                },
+                "name": "Array",
+                "type": "ArrayOperand"
+            },
+            "operand2": {
+                "index": {
+                    "name": "LoopCounter2",
+                    "type": "IntOperand"
+                },
+                "name": "Array",
+                "type": "ArrayOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 108,
+            "operand1": {
+                "name": "Temp",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "index": {
+                    "name": "NextElement",
+                    "type": "IntOperand"
+                },
+                "name": "Array",
+                "type": "ArrayOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 111,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 1
+            },
+            "operand2": {
+                "name": "DidSwap",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 112,
+            "operand1": {
+                "name": "AfterSwap",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "InitializeArray"
+            },
+            "lineNumber": 115,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Entering InitializeArray"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 116,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "operand2": {
+                "name": "InitializationLoopCounter",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "label": {
+                "name": "InitializationLoop"
+            },
+            "lineNumber": 118,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Running InitializationLoop"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 119,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Please enter next array element: "
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 120,
+            "operand1": {
+                "index": {
+                    "name": "InitializationLoopCounter",
+                    "type": "IntOperand"
+                },
+                "name": "Array",
+                "type": "ArrayOperand"
+            },
+            "type": "ReadIntStatement"
+        },
+        {
+            "lineNumber": 123,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 1
+            },
+            "operand2": {
+                "name": "InitializationLoopCounter",
+                "type": "IntOperand"
+            },
+            "type": "AddStatement"
+        },
+        {
+            "lineNumber": 124,
+            "operand1": {
+                "name": "n",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "InitializationLoopCounter",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 125,
+            "operand1": {
+                "name": "InitializationLoop",
+                "type": "LabelOperand"
+            },
+            "type": "JumpMoreStatement"
+        },
+        {
+            "lineNumber": 127,
+            "operand1": {
+                "name": "AfterInitialization",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "PrintArray"
+            },
+            "lineNumber": 131,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Entering PrintArray"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 132,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "operand2": {
+                "name": "PrintLoopCounter",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "label": {
+                "name": "PrintLoop"
+            },
+            "lineNumber": 134,
+            "operand1": {
+                "index": {
+                    "name": "PrintLoopCounter",
+                    "type": "IntOperand"
+                },
+                "name": "Array",
+                "type": "ArrayOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 136,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 1
+            },
+            "operand2": {
+                "name": "PrintLoopCounter",
+                "type": "IntOperand"
+            },
+            "type": "AddStatement"
+        },
+        {
+            "lineNumber": 137,
+            "operand1": {
+                "name": "PrintLoopCounter",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "n",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 138,
+            "operand1": {
+                "name": "PrintLoop",
+                "type": "LabelOperand"
+            },
+            "type": "JumpLessStatement"
+        },
+        {
+            "lineNumber": 140,
+            "operand1": {
+                "name": "AfterPrint",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "PrintVariables"
+            },
+            "lineNumber": 144,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "The values of all variables are:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 145,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "n:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 146,
+            "operand1": {
+                "name": "n",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 148,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 149,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "NextElement:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 150,
+            "operand1": {
+                "name": "NextElement",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 152,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 153,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "LastElementIndex:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 154,
+            "operand1": {
+                "name": "LastElementIndex",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 156,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 157,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Temp:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 158,
+            "operand1": {
+                "name": "Temp",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 161,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 162,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "InitializationLoopCounter:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 163,
+            "operand1": {
+                "name": "InitializationLoopCounter",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 165,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 166,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "LoopCounter1:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 167,
+            "operand1": {
+                "name": "LoopCounter1",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 169,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 170,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "LoopCounter2:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 171,
+            "operand1": {
+                "name": "LoopCounter2",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 173,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 174,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "DidSwap:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 175,
+            "operand1": {
+                "name": "DidSwap",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 177,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 178,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "PrintLoopCounter:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 179,
+            "operand1": {
+                "name": "PrintLoopCounter",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 181,
+            "operand1": {
+                "name": "EndOfProgram",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        }
+    ]
+}

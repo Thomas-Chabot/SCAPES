@@ -1,0 +1,33 @@
+This is the project submission for the COMP3004 project of SCAPES for Team 44, Team Rocket.
+
+BUILD: 'make'
+  Run that command from the root directory of the project (that is, the directory containing this file).
+
+RUN: ./Main/Main
+  This will start up the project, opening the editor window. Code can be written into this editor, saved, loaded, compiled, and executed. Specific program features are listed below.
+
+The project has been developed by Team Rocket, that is - Sean Hodges, Student #101012990. I am Team 44.
+
+
+The project has:
+  - A graphical interface for writing programs, compiling programs, and executing those programs
+  - Compilation files will be stored to the same directory as the source code, with the extension 'scaplc'
+  - Includes support for all statements listed in the project description - dci, dca, rdi, prt, mov, add, cmp, jls, jmr, jeq, jmp, #, and end
+
+There are two demo programs included in the DemoPrograms folder. These are:
+  MinMax - Takes in a list of numbers and prints the input sequence, the largest number, and the smallest number
+  BubbleSort - Takes in a list of numbers in unsorted order, performs a bubble sort on the list, and outputs the list in sorted order
+
+Both programs are fully documented, including print statements to describe the sequence of program execution.
+ 
+Finally, the Design Pattern I used is the Factory method, and documentation for the pattern is included under the file DesignPattern.txt.
+
+
+SOURCE CODE:
+	Logic/ contains all core logic
+	Interface/ deals with all the contents of the user interface
+	Storage/ handles data storage for saving & loading data.
+	Main/ is the main program entry point.
+
+DemoPrograms/ contains the demos.
+

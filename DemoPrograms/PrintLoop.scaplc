@@ -1,0 +1,255 @@
+{
+    "ints": [
+    ],
+    "statements": [
+        {
+            "lineNumber": 5,
+            "operand1": {
+                "name": "loopCheck",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 6,
+            "operand1": {
+                "name": "a",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 7,
+            "operand1": {
+                "name": "b",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 8,
+            "operand1": {
+                "name": "c",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "label": {
+                "name": "Loop"
+            },
+            "lineNumber": 11,
+            "operand1": {
+                "name": "a",
+                "type": "IntOperand"
+            },
+            "type": "ReadIntStatement"
+        },
+        {
+            "lineNumber": 12,
+            "operand1": {
+                "name": "b",
+                "type": "IntOperand"
+            },
+            "type": "ReadIntStatement"
+        },
+        {
+            "lineNumber": 13,
+            "operand1": {
+                "name": "c",
+                "type": "IntOperand"
+            },
+            "type": "ReadIntStatement"
+        },
+        {
+            "lineNumber": 16,
+            "operand1": {
+                "name": "a",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "b",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 17,
+            "operand1": {
+                "name": "CmpAC",
+                "type": "LabelOperand"
+            },
+            "type": "JumpMoreStatement"
+        },
+        {
+            "lineNumber": 18,
+            "operand1": {
+                "name": "CmpBC",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "CmpAC"
+            },
+            "lineNumber": 22,
+            "operand1": {
+                "name": "a",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "c",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 23,
+            "operand1": {
+                "name": "OutA",
+                "type": "LabelOperand"
+            },
+            "type": "JumpMoreStatement"
+        },
+        {
+            "lineNumber": 24,
+            "operand1": {
+                "name": "OutC",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "CmpBC"
+            },
+            "lineNumber": 27,
+            "operand1": {
+                "name": "b",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "c",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 28,
+            "operand1": {
+                "name": "OutB",
+                "type": "LabelOperand"
+            },
+            "type": "JumpMoreStatement"
+        },
+        {
+            "lineNumber": 29,
+            "operand1": {
+                "name": "OutC",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "OutA"
+            },
+            "lineNumber": 33,
+            "operand1": {
+                "name": "a",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 34,
+            "operand1": {
+                "name": "End",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "OutB"
+            },
+            "lineNumber": 37,
+            "operand1": {
+                "name": "b",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 38,
+            "operand1": {
+                "name": "End",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "OutC"
+            },
+            "lineNumber": 41,
+            "operand1": {
+                "name": "c",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 42,
+            "operand1": {
+                "name": "End",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "End"
+            },
+            "lineNumber": 45,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Continue? Enter 0 to stop: "
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 46,
+            "operand1": {
+                "name": "loopCheck",
+                "type": "IntOperand"
+            },
+            "type": "ReadIntStatement"
+        },
+        {
+            "lineNumber": 50,
+            "operand1": {
+                "name": "loopCheck",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 51,
+            "operand1": {
+                "name": "Loop",
+                "type": "LabelOperand"
+            },
+            "type": "JumpMoreStatement"
+        },
+        {
+            "lineNumber": 53,
+            "type": "EndStatement"
+        }
+    ]
+}

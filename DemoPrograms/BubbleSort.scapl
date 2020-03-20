@@ -1,0 +1,182 @@
+# This program runs a bubble sort on N values entered by the user.
+# Each program is read in from standard input, then output back to the user
+#  in sorted order.
+
+# Variable Initialization
+dci LoopCounter1
+dci LoopCounter2
+dci DidSwap
+dci Temp
+dci NextElement
+dci LastElementIndex
+dci n
+dci PrintLoopCounter
+dci InitializationLoopCounter
+
+# First, we need to grab how many elements the user wants in the array
+prt "Please enter how many elements to be stored in the array:"
+rdi n
+
+# Set up the array we're going to be using to store all the values
+dca Array n
+
+# And go through the values, one by one, through a loop
+# Reading each value individually
+jmp InitializeArray
+AfterInitialization: prt "Exiting initialization step"
+jmp BubbleSort
+
+AfterBubbleSort: prt "Exiting BubbleSort step"
+jmp PrintArray
+
+AfterPrint: prt "Exiting Print step"
+jmp PrintVariables
+
+EndOfProgram: end
+
+
+
+
+# This branch of code deals with the main logic of a Bubble Sort
+BubbleSort: prt "Entering Bubble Sort"
+
+# Set up the loop counters
+mov 0 LoopCounter1
+mov 0 LoopCounter2
+
+# Set up the final positions for the loop
+# For the inner loop, we end at n-1, which is going to be stored 
+#   in the variable LastElementIndex
+mov n LastElementIndex
+add -1 LastElementIndex
+
+# The main loop - goes from 0 to n-1
+BSLoop1: prt "Starting BSLoop1"
+mov 0 NextElement
+mov 0 LoopCounter2
+
+# The DidSwap boolean: If no swaps were made in the inner loop, exit early
+mov 0 DidSwap
+
+# Check if we want to jump into the loop or if we should continue past it
+# We should go from 0 <= j < n-1, so exit when LoopCounter2 >= LastElementIndex
+StartBSLoop2: prt "Checking loop counters" 
+cmp LoopCounter2 LastElementIndex
+jeq AfterBSLoop2
+jmp BSLoop2
+
+# The inside loop - goes from 0 to n-2
+# This is the one that actually does comparisons
+BSLoop2: prt "Starting BSLoop2"
+add 1 NextElement
+
+# Compare the array element at Array[j] with the element at Array[j+1]
+# If Array[LoopCounter2] > Array[LoopCounter2 + 1], then we need to swap the two elements
+cmp $Array+LoopCounter2 $Array+NextElement
+jmr Swap
+
+# Now increase the value of the loop counter and go back to the loop check
+AfterSwap: add 1 LoopCounter2
+jmp StartBSLoop2
+
+# Now increase the value of the first loop counter;
+# This one goes from 0 <= i < n, so exit when LoopCounter1 >= n -OR- we're sorted
+# NOTE: This is the Compound Condition here, where it checks both conditions to continue
+AfterBSLoop2: prt "Exiting BSLoop2"
+add 1 LoopCounter1
+cmp LoopCounter1 n
+jls CheckProceedLoop1
+
+# And at this point, both loops are completed and the array should be sorted;
+# So now go back to the main control flow
+jmp AfterBubbleSort
+
+
+# CheckProceedLoop1: Checks if a swap was made; if not, exit; if yes, continue
+CheckProceedLoop1: prt "Checking if a swap was made"
+cmp DidSwap 0
+jeq AfterBubbleSort
+jmp BSLoop1
+
+
+
+# This branch of code controls a Swap operation -
+#  That is, swapping the values in Array[n] and Array[NextElement],
+#  Where NextElement will always be n + 1
+Swap: prt "Entering Swap step"
+mov $Array+LoopCounter2 Temp
+mov $Array+NextElement $Array+LoopCounter2
+mov Temp $Array+NextElement
+
+# Mark that a swap was made
+mov 1 DidSwap
+jmp AfterSwap
+
+# This branch of code deals with the initialization of the array
+InitializeArray: prt "Entering InitializeArray"
+mov 0 InitializationLoopCounter
+
+InitializationLoop: prt "Running InitializationLoop"
+prt "Please enter next array element: "
+rdi $Array+InitializationLoopCounter
+
+# Check if we have any more elements to add to the array
+add 1 InitializationLoopCounter
+cmp n InitializationLoopCounter
+jmr InitializationLoop
+
+jmp AfterInitialization
+
+
+# This branch of code deals with outputting the array
+PrintArray: prt "Entering PrintArray"
+mov 0 PrintLoopCounter
+
+PrintLoop: prt $Array+PrintLoopCounter
+
+add 1 PrintLoopCounter
+cmp PrintLoopCounter n
+jls PrintLoop
+
+jmp AfterPrint
+
+
+
+PrintVariables: prt "The values of all variables are:"
+prt "n:"
+prt n
+
+prt ""
+prt "NextElement:"
+prt NextElement
+
+prt ""
+prt "LastElementIndex:"
+prt LastElementIndex
+
+prt ""
+prt "Temp:"
+prt Temp
+
+
+prt ""
+prt "InitializationLoopCounter:"
+prt InitializationLoopCounter
+
+prt ""
+prt "LoopCounter1:"
+prt LoopCounter1
+
+prt ""
+prt "LoopCounter2:"
+prt LoopCounter2
+
+prt ""
+prt "DidSwap:"
+prt DidSwap
+
+prt ""
+prt "PrintLoopCounter:"
+prt PrintLoopCounter
+
+jmp EndOfProgram

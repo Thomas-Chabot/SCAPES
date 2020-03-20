@@ -1,0 +1,96 @@
+# This program reads N inputs from the user and outputs the largest and smallest ones.
+# Note: Inputs must be within the range of -99999 to 99999
+
+
+# Initial Variables
+dci Min
+dci Max
+dci Input
+dci Counter
+dci N
+
+# Set initial values
+mov 0 Counter
+mov 99999 Min
+mov -99999 Max
+
+# Get the count of how many numbers to read from the user
+prt "How many numbers would you like to enter?"
+rdi N
+
+# Set up an array to store the values in
+dca Inputs N
+
+# InputLoop: Goes through and reads each number, one-by-one
+InputLoop: prt "Entering Input Loop"
+prt "Please enter a number:"
+rdi Input
+
+# Set the value in the array to the input
+mov Input $Inputs+Counter
+
+# If the number is smaller than our current minimum, set our minimum to the number
+cmp Input Min
+jls SetMin
+
+# If the number is larger than our current maximum, set our maximum to the number
+AfterMinUpdate: prt "After min update"
+cmp Input Max
+jmr SetMax
+
+# Check our counter against N: exit when Counter >= N
+AfterMaxUpdate: prt "After max update"
+
+add 1 Counter
+cmp Counter N
+jeq ExitLoop
+jmp InputLoop
+
+# Once we exit the loop, we'll know the smallest & largest numbers
+# As they'll be stored in Min and Max; print those out along with all the inputs
+ExitLoop: prt "Exiting the input loop"
+
+# Print out the input set
+mov 0 Counter
+
+prt "Input set:"
+PrintArray: cmp Counter N
+jeq AfterPrintArray
+
+prt $Inputs+Counter
+add 1 Counter
+jmp PrintArray
+
+AfterPrintArray: prt "Exiting the print array loop"
+prt "The smallest number is:"
+prt Min
+
+prt "The largest number is:"
+prt Max
+
+# Print out other variables
+prt ""
+prt "N:"
+prt N
+
+prt ""
+prt "Counter:"
+prt Counter
+
+prt ""
+prt "Input:"
+prt Input
+
+# Nothing more to do, end the program here
+end
+
+
+# SetMin: Sets the minimum to be the input value
+SetMin: prt "Setting input as minimum"
+mov Input Min
+jmp AfterMinUpdate
+
+# SetMax: Sets the maximum to be the input value
+SetMax: prt "Setting input as maximum"
+mov Input Max
+jmp AfterMaxUpdate

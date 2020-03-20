@@ -1,0 +1,53 @@
+# This program repeatedly compares three values entered by the user
+# And stops when the user enters a value of 0 for the loopCheck variable
+
+# Declare the three variables used in the loop + the loopCheck variable
+dci loopCheck
+dci a
+dci b
+dci c
+
+# Create the loop
+Loop: rdi a
+rdi b
+rdi c
+
+# Compare A with B, then compare the larger with C
+cmp a b
+jmr CmpAC
+jmp CmpBC
+
+# Comparisons
+# Compare A vs. C as biggest
+CmpAC: cmp a c
+jmr OutA
+jmp OutC
+
+# Compare B vs C as biggest
+CmpBC: cmp b c
+jmr OutB
+jmp OutC
+
+# Create the three output paths, where the largest variable will be outputted
+# OutA: A is biggest
+OutA: prt a
+jmp End
+
+# OutB: B is biggest
+OutB: prt b
+jmp End
+
+# OutC: C is biggest
+OutC: prt c
+jmp End
+
+# End of the loop - ask if the loop should continue
+End: prt "Continue? Enter 0 to stop: "
+rdi loopCheck
+
+# If user entered 0: jump back to the start of the loop;
+# Otherwise, stop
+cmp loopCheck 0
+jmr Loop
+
+end

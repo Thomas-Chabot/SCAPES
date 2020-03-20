@@ -1,0 +1,92 @@
+{
+    "ints": [
+    ],
+    "statements": [
+        {
+            "lineNumber": 5,
+            "operand1": {
+                "name": "a",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 6,
+            "operand1": {
+                "name": "b",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 9,
+            "operand1": {
+                "name": "a",
+                "type": "IntOperand"
+            },
+            "type": "ReadIntStatement"
+        },
+        {
+            "lineNumber": 10,
+            "operand1": {
+                "name": "b",
+                "type": "IntOperand"
+            },
+            "type": "ReadIntStatement"
+        },
+        {
+            "lineNumber": 13,
+            "operand1": {
+                "name": "a",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "b",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 14,
+            "operand1": {
+                "name": "L1",
+                "type": "LabelOperand"
+            },
+            "type": "JumpMoreStatement"
+        },
+        {
+            "lineNumber": 17,
+            "operand1": {
+                "name": "b",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 18,
+            "operand1": {
+                "name": "L2",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "L1"
+            },
+            "lineNumber": 21,
+            "operand1": {
+                "name": "a",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "label": {
+                "name": "L2"
+            },
+            "lineNumber": 24,
+            "type": "EndStatement"
+        }
+    ]
+}

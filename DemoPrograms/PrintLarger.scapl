@@ -1,0 +1,24 @@
+# This program reads in two integers from the user
+# And outputs the larger of the two values.
+
+# Declare the two integers as two variables, a & b
+dci a
+dci b
+
+# Take in the values for the integers from the user
+rdi a
+rdi b
+
+# Perform the comparison on the values, then jump to L1 if a is bigger
+cmp a b
+jmr L1
+
+# Otherwise, b is >= a: we should output b, then jump to the end (L2)
+prt b
+jmp L2
+
+# If we jump to L1: a is bigger, so output its value
+L1: prt a
+
+# Either way, the program ends here
+L2: end

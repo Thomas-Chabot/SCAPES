@@ -1,0 +1,546 @@
+{
+    "arrays": [
+        {
+            "name": "Inputs",
+            "size": {
+                "name": "N",
+                "type": "IntOperand"
+            }
+        }
+    ],
+    "ints": [
+        {
+            "name": "Input"
+        },
+        {
+            "name": "Counter"
+        },
+        {
+            "name": "Min"
+        },
+        {
+            "name": "N"
+        },
+        {
+            "name": "Max"
+        }
+    ],
+    "statements": [
+        {
+            "lineNumber": 6,
+            "operand1": {
+                "name": "Min",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 7,
+            "operand1": {
+                "name": "Max",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 8,
+            "operand1": {
+                "name": "Input",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 9,
+            "operand1": {
+                "name": "Counter",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 10,
+            "operand1": {
+                "name": "N",
+                "type": "NameOperand"
+            },
+            "type": "DeclareIntStatement"
+        },
+        {
+            "lineNumber": 13,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "operand2": {
+                "name": "Counter",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 14,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 99999
+            },
+            "operand2": {
+                "name": "Min",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 15,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": -99999
+            },
+            "operand2": {
+                "name": "Max",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 18,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "How many numbers would you like to enter?"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 19,
+            "operand1": {
+                "name": "N",
+                "type": "IntOperand"
+            },
+            "type": "ReadIntStatement"
+        },
+        {
+            "lineNumber": 22,
+            "operand1": {
+                "name": "Inputs",
+                "type": "NameOperand"
+            },
+            "operand2": {
+                "name": "N",
+                "type": "IntOperand"
+            },
+            "type": "DeclareArrayStatement"
+        },
+        {
+            "label": {
+                "name": "InputLoop"
+            },
+            "lineNumber": 25,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Entering Input Loop"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 26,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Please enter a number:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 27,
+            "operand1": {
+                "name": "Input",
+                "type": "IntOperand"
+            },
+            "type": "ReadIntStatement"
+        },
+        {
+            "lineNumber": 30,
+            "operand1": {
+                "name": "Input",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "index": {
+                    "name": "Counter",
+                    "type": "IntOperand"
+                },
+                "name": "Inputs",
+                "type": "ArrayOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 33,
+            "operand1": {
+                "name": "Input",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "Min",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 34,
+            "operand1": {
+                "name": "SetMin",
+                "type": "LabelOperand"
+            },
+            "type": "JumpLessStatement"
+        },
+        {
+            "label": {
+                "name": "AfterMinUpdate"
+            },
+            "lineNumber": 37,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "After min update"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 38,
+            "operand1": {
+                "name": "Input",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "Max",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 39,
+            "operand1": {
+                "name": "SetMax",
+                "type": "LabelOperand"
+            },
+            "type": "JumpMoreStatement"
+        },
+        {
+            "label": {
+                "name": "AfterMaxUpdate"
+            },
+            "lineNumber": 42,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "After max update"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 44,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 1
+            },
+            "operand2": {
+                "name": "Counter",
+                "type": "IntOperand"
+            },
+            "type": "AddStatement"
+        },
+        {
+            "lineNumber": 45,
+            "operand1": {
+                "name": "Counter",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "N",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 46,
+            "operand1": {
+                "name": "ExitLoop",
+                "type": "LabelOperand"
+            },
+            "type": "JumpEqualStatement"
+        },
+        {
+            "lineNumber": 47,
+            "operand1": {
+                "name": "InputLoop",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "ExitLoop"
+            },
+            "lineNumber": 51,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Exiting the input loop"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 54,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 0
+            },
+            "operand2": {
+                "name": "Counter",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 56,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Input set:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "label": {
+                "name": "PrintArray"
+            },
+            "lineNumber": 57,
+            "operand1": {
+                "name": "Counter",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "N",
+                "type": "IntOperand"
+            },
+            "type": "CompareStatement"
+        },
+        {
+            "lineNumber": 58,
+            "operand1": {
+                "name": "AfterPrintArray",
+                "type": "LabelOperand"
+            },
+            "type": "JumpEqualStatement"
+        },
+        {
+            "lineNumber": 60,
+            "operand1": {
+                "index": {
+                    "name": "Counter",
+                    "type": "IntOperand"
+                },
+                "name": "Inputs",
+                "type": "ArrayOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 61,
+            "operand1": {
+                "type": "LiteralOperand",
+                "value": 1
+            },
+            "operand2": {
+                "name": "Counter",
+                "type": "IntOperand"
+            },
+            "type": "AddStatement"
+        },
+        {
+            "lineNumber": 62,
+            "operand1": {
+                "name": "PrintArray",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "AfterPrintArray"
+            },
+            "lineNumber": 64,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Exiting the print array loop"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 65,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "The smallest number is:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 66,
+            "operand1": {
+                "name": "Min",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 68,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "The largest number is:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 69,
+            "operand1": {
+                "name": "Max",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 72,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 73,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "N:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 74,
+            "operand1": {
+                "name": "N",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 76,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 77,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Counter:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 78,
+            "operand1": {
+                "name": "Counter",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 80,
+            "operand1": {
+                "type": "StringOperand",
+                "value": ""
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 81,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Input:"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 82,
+            "operand1": {
+                "name": "Input",
+                "type": "IntOperand"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 85,
+            "type": "EndStatement"
+        },
+        {
+            "label": {
+                "name": "SetMin"
+            },
+            "lineNumber": 89,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Setting input as minimum"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 90,
+            "operand1": {
+                "name": "Input",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "Min",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 91,
+            "operand1": {
+                "name": "AfterMinUpdate",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        },
+        {
+            "label": {
+                "name": "SetMax"
+            },
+            "lineNumber": 94,
+            "operand1": {
+                "type": "StringOperand",
+                "value": "Setting input as maximum"
+            },
+            "type": "PrintStatement"
+        },
+        {
+            "lineNumber": 95,
+            "operand1": {
+                "name": "Input",
+                "type": "IntOperand"
+            },
+            "operand2": {
+                "name": "Max",
+                "type": "IntOperand"
+            },
+            "type": "MoveStatement"
+        },
+        {
+            "lineNumber": 96,
+            "operand1": {
+                "name": "AfterMaxUpdate",
+                "type": "LabelOperand"
+            },
+            "type": "JumpStatement"
+        }
+    ]
+}
